@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="8dp">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+<TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="WiFiScope" android:textSize="25sp" android:textStyle="bold"/>
+<Button android:id="@+id/btnPermissions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Permisos"/>
+</LinearLayout>
+<TextView android:id="@+id/txtConnection" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Wi‑Fi actual: sin datos" android:textStyle="bold" android:textSize="15sp" android:paddingTop="2dp"/>
+<TextView android:id="@+id/txtLive" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="BSSID: — RSSI: —" android:textSize="14sp" android:paddingBottom="3dp"/>
+<TextView android:id="@+id/txtStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Carga un plano para comenzar." android:paddingBottom="5dp"/>
+<HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+<Button android:id="@+id/btnLoadPlan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cargar plano"/>
+<Button android:id="@+id/btnRefreshWifi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Actualizar Wi‑Fi"/>
+<Button android:id="@+id/btnHeatmap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Generar mapa"/>
+<Button android:id="@+id/btnClearHeatmap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Plano normal"/>
+<Button android:id="@+id/btnUndo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Borrar último"/>
+<Button android:id="@+id/btnExport" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Exportar PNG"/>
+</LinearLayout>
+</HorizontalScrollView>
+<FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#20242A">
+<com.wifiscope.app.SurveyView android:id="@+id/surveyView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="4dp">
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Débil " android:textStyle="bold"/>
+<View android:layout_width="0dp" android:layout_height="13dp" android:layout_weight="1" android:background="#D246C3"/>
+<View android:layout_width="0dp" android:layout_height="13dp" android:layout_weight="1" android:background="#466EEB"/>
+<View android:layout_width="0dp" android:layout_height="13dp" android:layout_weight="1" android:background="#46BEDC"/>
+<View android:layout_width="0dp" android:layout_height="13dp" android:layout_weight="1" android:background="#46C878"/>
+<View android:layout_width="0dp" android:layout_height="13dp" android:layout_weight="1" android:background="#EBDC50"/>
+<View android:layout_width="0dp" android:layout_height="13dp" android:layout_weight="1" android:background="#F5873C"/>
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Fuerte" android:textStyle="bold"/>
+</LinearLayout>
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Toca tu posición: se tomarán 7 muestras de la conexión actual y se guardará la mediana." android:paddingTop="3dp"/>
+</LinearLayout>
