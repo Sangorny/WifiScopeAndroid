@@ -1,0 +1,23 @@
+WifiScopeAndroid/
+├── app/
+│   ├── build.gradle
+│   └── src/
+│       └── main/
+│           ├── AndroidManifest.xml
+│           ├── java/
+│           │   └── com/
+│           │       └── wifiscope/
+│           │           └── app/
+│           │               ├── MainActivity.java
+│           │               └── SurveyView.java
+│           └── res/
+│               ├── layout/
+│               │   └── activity_main.xml
+│               └── values/
+│                   └── styles.xml
+├── build.gradle
+├── gradle.properties
+├── settings.gradle
+└── .github/
+    └── workflows/
+        └── build-apk.yml
